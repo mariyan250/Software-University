@@ -1,0 +1,15 @@
+function solve(input) {
+    let num = Number(input);
+
+    if (num >= 0 && num <= 2) {
+        console.log("baby");
+    } else if (num >= 3 && num <= 13) {
+        console.log("child");
+    } else if (num >= 14 && num <= 19) {
+        console.log("teenager");
+    } else if (num >= 20 && num <= 65) {
+        console.log("adult");
+    } else {
+        console.log("elder");
+    }
+}
