@@ -1,2 +1,1 @@
-"# Software-University" 
-"# Software-University" 
+Software University
