@@ -12,13 +12,12 @@ function solve(arr) {
                 maxItem = itemsCount;
                 theSequence = arr.slice(i - maxItem + 1, i + 1);
             }
-           
+
         } else {
             itemsCount = 1;
         }
     }
 
     console.log(theSequence.join(" "));
+    solve([3, 2, 3, 3, 3, 2, 2, 1]);
 }
-
-solve([3,2,3,3,3,2,2,1])

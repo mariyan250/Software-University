@@ -17,7 +17,7 @@ function solve(arr) {
             if (!outputArr.includes(currentElement)) {
                 outputArr.push(currentElement);
             }
-            
+
         }
     }
 

@@ -7,7 +7,7 @@ function solve(arr, num) {
             let element2 = arr[n];
 
             if (element + element2 == num) {
-               console.log(element, element2);
+                console.log(element, element2);
             }
         }
     }

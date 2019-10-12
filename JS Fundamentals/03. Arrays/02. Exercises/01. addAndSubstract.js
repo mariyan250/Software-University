@@ -6,7 +6,7 @@ function solve(arr) {
         sumStore += Number(element);
     });
 
-    let  newArr = [];
+    let newArr = [];
     arr.forEach((element, i) => {
         if (element % 2 == 0) {
             element += i;
