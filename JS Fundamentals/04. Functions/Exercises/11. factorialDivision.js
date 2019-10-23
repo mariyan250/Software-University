@@ -1,8 +1,10 @@
 function solve(num1, num2) {
     function calculateFactorial(n) {
+        debugger;
         if (n > 1) {
             return n * (calculateFactorial(n - 1));
         }
+
 
         if (n == 1) {
             return 1;
