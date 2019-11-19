@@ -1,1 +1,0 @@
-// 3 and 6 exercise
