@@ -9,5 +9,3 @@ function solve(num1, num2, num3) {
     });
     console.log(initialNum);
 }
-
-solve(3, 3, 2)

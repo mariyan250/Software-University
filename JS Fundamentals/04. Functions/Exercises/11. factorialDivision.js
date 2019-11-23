@@ -16,5 +16,3 @@ function solve(num1, num2) {
     let result = firstNum / secondNum;
     console.log(result.toFixed(2));
 }
-
-solve(6, 2);

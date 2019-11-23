@@ -95,14 +95,3 @@ function manOWar(input) {
     console.log(`Pirate ship status: ${ourShip.reduce((a, b) => a + b)}`);
     console.log(`Warship status: ${warShip.reduce((a, b) => a + b)}`);
 }
-
-manOWar([
-    '2>3>4>5>2',
-    '6>7>8>9>10>11',
-    '20',
-    'Status',
-    'Fire 2 3',
-    'Defend 0 4 11',
-    'Repair 3 18',
-    'Retire'
-]);

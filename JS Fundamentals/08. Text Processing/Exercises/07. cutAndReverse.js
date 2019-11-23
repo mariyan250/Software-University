@@ -5,5 +5,3 @@ function solve(str) {
     console.log(first.reverse().join(""));
     console.log(second.reverse().join(""));
 }
-
-solve('tluciffiDsIsihTgnizamAoSsIsihT');

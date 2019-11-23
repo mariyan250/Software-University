@@ -12,8 +12,6 @@ function solve(arr, rotations) {
     arr.forEach(element => {
         newArr += `${element} `;
     })
-    
+
     console.log(newArr);
 }
-
-solve([51, 47, 32, 61, 21], 2);

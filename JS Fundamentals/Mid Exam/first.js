@@ -36,5 +36,3 @@ function solve(input) {
         }
     }
 }
-
-solve([65, 12, 26000]);

@@ -30,5 +30,3 @@ function partyProfit(input) {
 
     console.log(`${partySize} companions received ${Math.floor(coins / partySize)} coins each.`);
 }
-
-partyProfit(['3', '5']);

@@ -3,5 +3,3 @@ function solve(n) {
         console.log(`${n} `.repeat(n))
     }
 }
-
-solve(3);

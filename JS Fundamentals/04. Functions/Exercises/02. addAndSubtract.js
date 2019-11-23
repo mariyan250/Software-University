@@ -12,5 +12,3 @@ function sum(num1, num2, num3) {
 
     subtract();
 }
-
-sum(23, 6, 10);

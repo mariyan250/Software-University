@@ -44,11 +44,3 @@ function solve(input) {
 
     console.log(`You crafted ${names.join("")}!`);
 }
-
-solve(['ri|As|er|hb|ng',
-    'Move Left 1',
-    'Move Right 2',
-    'Move Right 3',
-    'Move Left 2',
-    'Done'
-]);

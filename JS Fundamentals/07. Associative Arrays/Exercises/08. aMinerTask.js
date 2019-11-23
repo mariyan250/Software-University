@@ -15,5 +15,3 @@ function minerTask(input) {
         console.log(`${key} -> ${obj[key]}`);
     }
 }
-
-minerTask(['gold', '155', 'silver', '10', 'copper', '17']);

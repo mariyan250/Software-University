@@ -70,5 +70,3 @@ function solve(people, type, day) {
 
     console.log(`Total price: ${price.toFixed(2)}`);
 }
-
-solve(30, "Students", "Sunday");

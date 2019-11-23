@@ -8,5 +8,3 @@ function solve(arr) {
         }
     });
 }
-
-solve([123, 323, 421, 121])

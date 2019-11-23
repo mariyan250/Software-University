@@ -48,5 +48,3 @@ function numberArray(input) {
     let numsToPrint = numbers.filter(element => element >= 0);
     console.log(numsToPrint.join(" "));
 }
-
-numberArray(['1 2 3 4 5', 'Switch 4', 'Change 0 -3', 'Sum Negative', 'End']);

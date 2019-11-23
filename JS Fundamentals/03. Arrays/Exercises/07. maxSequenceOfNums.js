@@ -4,8 +4,6 @@ function solve(arr) {
     let theSequence = [];
 
     for (let i = 0; i < arr.length; i++) {
-        const element = arr[i];
-
         if (arr[i] == arr[i - 1]) {
             itemsCount++;
             if (itemsCount > maxItem) {
@@ -19,5 +17,4 @@ function solve(arr) {
     }
 
     console.log(theSequence.join(" "));
-    solve([3, 2, 3, 3, 3, 2, 2, 1]);
 }

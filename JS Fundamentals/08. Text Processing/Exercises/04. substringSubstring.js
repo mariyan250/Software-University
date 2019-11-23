@@ -7,5 +7,4 @@ function solve(word, sentence) {
     } else {
         console.log(`${word} not found!`);
     }
-
 }

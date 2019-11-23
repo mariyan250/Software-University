@@ -57,14 +57,3 @@ function taskPlanner(input) {
     const finalPrint = hours.filter(hour => hour > 0);
     console.log(finalPrint.join(" "));
 }
-
-taskPlanner([
-    '1 2 3 4 5 4 0 3 2 1',
-    'Complete 0',
-    'Complete 1',
-    'Complete 2',
-    'Drop 3',
-    'Change 4 1',
-    'Count Completed',
-    'End'
-]);

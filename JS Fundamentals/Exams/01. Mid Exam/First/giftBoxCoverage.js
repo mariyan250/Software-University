@@ -17,5 +17,3 @@ function giftBoxCoverage(input) {
     let percent = (sheetsCover / area) * 100;
     console.log(`You can cover ${percent.toFixed(2)}% of the box.`);
 }
-
-giftBoxCoverage(['2.5', '32', '4.25']);

@@ -14,5 +14,3 @@ function solve(num) {
 
     getPrint(theNum);
 }
-
-solve(30);

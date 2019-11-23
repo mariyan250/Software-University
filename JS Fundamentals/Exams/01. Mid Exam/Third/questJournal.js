@@ -51,10 +51,3 @@ function questJournal(input) {
         }
     }
 }
-
-questJournal([
-    'Hello World, For loop, If else',
-    'Start - While loop',
-    'Complete - For loop',
-    'Retire!'
-]);

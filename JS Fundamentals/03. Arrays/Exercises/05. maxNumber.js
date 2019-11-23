@@ -23,5 +23,3 @@ function solve(arr) {
 
     console.log(outputArr.join(" "));
 }
-
-solve([41, 41, 34, 20]);

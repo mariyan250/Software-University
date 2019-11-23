@@ -23,10 +23,3 @@ function solve(arr) {
         console.log(name);
     })
 }
-
-solve(['Tom is going!',
-    'Annie is going!',
-    'Tom is going!',
-    'Garry is going!',
-    'Jerry is going!'
-]);

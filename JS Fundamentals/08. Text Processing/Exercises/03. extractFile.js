@@ -11,5 +11,4 @@ function solve(path) {
 
     console.log(`File name: ${fileName}`);
     console.log(`File extension: ${extension}`);
-
 }

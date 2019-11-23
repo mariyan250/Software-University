@@ -68,11 +68,3 @@ function froggySquad(input) {
         }
     }
 }
-
-froggySquad([
-    'Blake Muggy Kishko',
-    'Join Kvachko',
-    'Dive 0',
-    'First 10',
-    'Print Reversed'
-]);

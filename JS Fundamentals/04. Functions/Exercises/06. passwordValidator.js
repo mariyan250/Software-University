@@ -57,5 +57,3 @@ function solve(password) {
         console.log("Password is valid");
     }
 }
-
-solve("MyPass123");

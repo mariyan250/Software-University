@@ -21,5 +21,3 @@ function solve(string1, string2) {
         console.log(symbols.join(" "))
     }
 }
-
-solve('a', 'd');

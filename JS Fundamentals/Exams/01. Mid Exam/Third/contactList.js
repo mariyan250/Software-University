@@ -57,12 +57,3 @@ function contactList(input) {
         }
     }
 }
-
-contactList([
-    'Zayn Katy Ariana Avril Nick Mikolas',
-    'Remove 3',
-    'Add Jacob 0',
-    'Export 0 3',
-    'Export 3 8',
-    'Print Reversed'
-]);

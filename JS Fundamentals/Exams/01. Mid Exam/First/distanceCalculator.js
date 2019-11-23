@@ -16,5 +16,3 @@ function distanceCalculator(input) {
     let percent = (distanceCounter / distance).toFixed(2);
     console.log(`You travelled ${percent}% of the distance!`);
 }
-
-distanceCalculator([5000, 7.5, 500]);

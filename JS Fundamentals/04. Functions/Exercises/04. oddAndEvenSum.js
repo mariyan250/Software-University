@@ -44,5 +44,3 @@ function solve(num) {
 
     console.log(`Odd sum = ${oddSum}, Even sum = ${evenSum}`)
 }
-
-solve(1000435)
