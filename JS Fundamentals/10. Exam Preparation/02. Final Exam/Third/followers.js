@@ -68,14 +68,3 @@ function solve(input) {
             console.log(`${follower}: ${obj[follower].likes + obj[follower].comments}`);
         })
 }
-
-solve([
-    'Like: A: 3',
-    'Comment: A',
-    'New follower: B',
-    'Blocked: A',
-    'Comment: B',
-    'Like: C: 5',
-    'Like: D: 5',
-    'Log out'
-]);
