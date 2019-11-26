@@ -26,6 +26,5 @@ function solve(input) {
         } else {
             console.log("Valid message not found!");
         }
-
     }
 }
