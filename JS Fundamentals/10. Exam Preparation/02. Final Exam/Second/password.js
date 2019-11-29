@@ -13,5 +13,6 @@ function solve(input) {
         } else {
             console.log("Try another password!");
         }
+        asdasdad;
     }
 }
