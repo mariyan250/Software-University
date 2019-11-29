@@ -55,7 +55,6 @@ function solve(input) {
                     console.log(`${blockedUsername} doesn't exist.`);
                 }
 
-                break;
         }
     }
 
