@@ -1,21 +1,17 @@
 function solve(input) {
-    let initialNumber = 1;
-    let result = [];
+    let initialSum = 1;
 
-    input.forEach(row => {
-        if (row == "add") {
-            result.push(initialNumber);
+    const result = input.reduce((acc, val) => {
+        if (val == "add") {
+            acc.push(initialSum);
         } else {
-            result.pop();
+            acc.pop();
         }
-        initialNumber++;
-    });
 
-    if (result.length > 0) {
-        result.forEach(row => {
-            console.log(row);
-        });
-    } else {
-        console.log(`Empty`)
-    }
+        initialSum++;
+
+        return acc;
+    }, [])
+
+    return result.length > 0 ? result.join("\n") : 'Empty';
 }
