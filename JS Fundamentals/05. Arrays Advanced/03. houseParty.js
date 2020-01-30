@@ -21,5 +21,5 @@ function solve(arr) {
 
     people.forEach((name) => {
         console.log(name);
-    })
+    });
 }
