@@ -1,44 +1,103 @@
+const assert = require('chai').assert;
+
 describe('Test', () => {
-    describe('Testing prepend()', () => {
-        it('if have string passed', () => {
-            let result = new StringBuilder('name');
-            result.prepend('xxx');
-            assert.deepEqual(result._stringArray, ['x', 'x', 'x', 'n', 'a', 'm', 'e',]);
-        });
+    let result;
+    let output;
 
-        it('if not have nothing passed', () => {
-            let result = () => new StringBuilder('name').append(20);
-            assert.throw(result, 'Argument must be string');
-        });
-    });
-
-    describe('Testing remove()', () => {
-        it('should remove', () => {
-            let result = new StringBuilder('name')
-            result.remove(0, 1);
-            assert.deepEqual(result._stringArray, ['a', 'm', 'e']);
-        });
+    beforeEach(() => {
+        result = null;
+        output = null
     })
 
-    describe('Testing insertAt()', () => {
-        it('if have string passed', () => {
-            let result = new StringBuilder('name');
-            result.insertAt('my', 1);
-            assert.deepEqual(result._stringArray, ['n', 'm', 'y', 'a', 'm', 'e']);
-        });
+    describe('Testing constructor', () => {
+        it('test', () => {
+            result = new PaymentPackage('string', 5)
+            assert.equal(result.name, 'string')
+            assert.equal(result.value, 5)
+        })
     });
 
+    describe('Testing name()', () => {
+        it('test', () => {
+            result = () => new PaymentPackage(5, 5)
+            assert.throw(result, 'Name must be a non-empty string')
+        })
+        it('test', () => {
+            result = () => new PaymentPackage('', 5)
+            assert.throw(result, 'Name must be a non-empty string')
+        })
+    });
+
+    describe('Testing value()', () => {
+        it('test', () => {
+            result = () => new PaymentPackage('string', -5)
+            assert.throw(result, 'Value must be a non-negative number')
+        })
+        it('test', () => {
+            result = () => new PaymentPackage('string', 'string')
+            assert.throw(result, 'Value must be a non-negative number')
+        })
+    });
+
+    describe('Testing VAT()', () => {
+        it('test11', () => {
+            result = () => new PaymentPackage('string', 10).VAT = 'str'
+            assert.throw(result, 'VAT must be a non-negative number')
+        })
+        it('test', () => {
+            result = () => new PaymentPackage('string', 10).VAT = -2
+            assert.throw(result, 'VAT must be a non-negative number')
+        })
+        it('test', () => {
+            result = new PaymentPackage('a', 1)
+            output = result.VAT;
+            assert.deepEqual(output, 20)
+        })
+    });
+
+    describe('Testing active()', () => {
+        it('test', () => {
+            result = () => new PaymentPackage('string', 10).active = 'Boolean'
+            assert.throw(result, 'Active status must be a boolean')
+        })
+        it('test', () => {
+            result = new PaymentPackage('a', 1)
+            output = result.active;
+            assert.deepEqual(output, true)
+        })
+    });
     describe('Testing toString()', () => {
-        it('if have string passed', () => {
-            let result = new StringBuilder('name').toString();
-            assert.deepEqual(result, 'name');
-        });
-    });
-
-    describe('Testing _vrfyParam()', () => {
-        it('if have string passed', () => {
-            let result = () => StringBuilder._vrfyParam(20);
-            assert.throw(result, 'Argument must be string');
-        });
+        it('test', () => {
+            result = new PaymentPackage('HR Services', 1500)
+            result = result.toString();
+            output = [
+                `Package: HR Services`,
+                `- Value (excl. VAT): 1500`,
+                `- Value (VAT 20%): 1800`
+            ];
+            assert.equal(result, output.join('\n'))
+        })
+        it('test', () => {
+            result = new PaymentPackage('HR Services', 1500)
+            result._active = false;
+            result = result.toString();
+            output = [
+                `Package: HR Services (inactive)`,
+                `- Value (excl. VAT): 1500`,
+                `- Value (VAT 20%): 1800`
+            ];
+            assert.equal(result, output.join('\n'))
+        })
+        it('test', () => {
+            result = new PaymentPackage('HR Services', 0)
+            result._VAT = 0;
+            result = result.toString();
+            output = [
+                `Package: HR Services`,
+                `- Value (excl. VAT): 0`,
+                `- Value (VAT 0%): 0`
+            ];
+            assert.equal(result, output.join('\n'))
+        })
     });
 });
