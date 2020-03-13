@@ -1,13 +1,16 @@
 function attachEvents() {
     const btnLoad = document.querySelector('#btnLoad');
     const phonebook = document.querySelector('#phonebook');
+    const createButton = document.querySelector('#btnCreate');
+    const personInput = document.querySelector('#person');
+    const phoneInput = document.querySelector('#phone');
 
     const handleDelete = async (e) => {
         const i = e.target.parentNode.getAttribute('i');
-        fetch(`https://remotedb-6a1f6.firebaseio.com/phonebook/${i}.json`, {
+        await fetch(`https://remotedb-6a1f6.firebaseio.com/phonebook/${i}.json`, {
             method: 'DELETE'
-        })
-            .then(() => location.reload());
+        });
+        location.reload();
     }
 
     const handleLoad = async () => {
@@ -33,6 +36,21 @@ function attachEvents() {
     }
 
     btnLoad.addEventListener('click', handleLoad);
+
+    const handleCreate = async () => {
+        await fetch('https://remotedb-6a1f6.firebaseio.com/phonebook.json', {
+            method: 'POST',
+            body: JSON.stringify({
+                person: personInput.value,
+                phone: phoneInput.value
+            })
+        });
+
+        personInput.value = '';
+        phoneInput.value = '';
+    }
+
+    createButton.addEventListener('click', handleCreate);
 }
 
 attachEvents();
