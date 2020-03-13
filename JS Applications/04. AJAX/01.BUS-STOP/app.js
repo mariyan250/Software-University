@@ -5,7 +5,7 @@ async function getInfo() {
 
     busesUl.innerHTML = '';
 
-    const res = await fetch(`http://localhost:3000/businfo/`);
+    const res = await fetch(`https://remotedb-6a1f6.firebaseio.com/businfo.json`);
     const data = await res.json();
 
     if (!data[id.value]) {
